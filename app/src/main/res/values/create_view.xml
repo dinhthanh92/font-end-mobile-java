@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_name">Enter Name</string>
+    <string name="hint_date">Enter Date</string>
+    <string name="btn_create">Enter Date</string>
+</resources>

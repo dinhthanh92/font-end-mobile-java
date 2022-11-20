@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:filterTouchesWhenObscured="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Create Trip"
+        android:textAlignment="center"
+        android:textColor="#472D2D"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:startIconDrawable="@drawable/ic_baseline_edit_title_24"
+        android:hint="Enter trip (*)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter trip ..." />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:startIconDrawable="@drawable/ic_baseline_edit_title_24"
+        android:hint="Start date - End date (*)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_date"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_create_form"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#472D2D"
+        android:hint="Create"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+</LinearLayout>

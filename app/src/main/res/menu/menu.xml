@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/user_manager"
+        android:title="User manager"
+        />
+    <item android:id="@+id/log_out"
+        android:title="Log out"
+        />
+    <item android:id="@+id/home_action"
+        app:showAsAction="ifRoom"
+        android:title="Google map"
+        android:icon="@drawable/ic_home_action"
+        />
+</menu>

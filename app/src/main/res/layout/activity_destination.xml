@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/header_trip_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="List trip"
+        android:textColor="#553939"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/start_date_view_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/header_trip_destination"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/view_icon_right"
+        android:paddingTop="10dp"
+        android:text="09/02/2020"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/view_icon_right"
+        android:layout_width="22dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/header_trip_destination"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/end_date_view_destination"
+        android:backgroundTint="#F3EDED"
+        android:paddingTop="9dp"
+        android:src="@drawable/ic_baseline_arrow_right_alt_24"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/start_date_view_destination" />
+
+    <TextView
+        android:id="@+id/end_date_view_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/header_trip_destination"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:paddingTop="10dp"
+        android:text="09/02/2020"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/view_icon_right" />
+
+    <TextView
+        android:id="@+id/text_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/end_date_view_destination"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:paddingTop="10dp"
+        android:text="Total price: "
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/total_price_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/end_date_view_destination"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/text_total_price"
+        android:paddingTop="10dp"
+        android:text="$ 200"
+        android:textColor="#553939"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_destination"
+        android:layout_marginTop="14dp"
+        android:nestedScrollingEnabled="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <EditText
+        android:id="@+id/search_destination"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/btn_create_destination"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:drawablePadding="12dp"
+        android:hint="Search destination/place ..." />
+
+    <Button
+        android:id="@+id/btn_create_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_total_price"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#553939"
+        android:drawableLeft="@drawable/ic_baseline_add_24"
+        android:text="Create destination" />
+
+    <Button
+        android:id="@+id/btn_google_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_total_price"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#553939"
+        android:drawableLeft="@drawable/ic_baseline_map_24"
+        android:text="Map" />
+</RelativeLayout>
